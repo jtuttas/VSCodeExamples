@@ -83,8 +83,7 @@ connect-pi2b= ssh -R 52698:127.0.0.1:52698 pi@service.joerg-tuttas.de -p 8201
 
 Auf dem PI muss *rcode* installiert werden!
 ```bash
-sudo wget -O /usr/local/bin/rcode \
-https://raw.github.com/aurora/rmate/master/rmate
+sudo wget -O /usr/local/bin/rcode https://raw.github.com/aurora/rmate/master/rmate
 chmod a+x /usr/local/bin/rcode
 ```
 Dann sollte noch ein alias eingerichtet werden z.B. unter */etc/profile*
