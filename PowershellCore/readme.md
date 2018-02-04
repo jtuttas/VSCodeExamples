@@ -1,6 +1,6 @@
 # Powershell Core
 ## Extensions
-- Powershell
+- [Powershell Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
 ## Konfiguration
 In den folgenden Einstellungen muss das Verzeichnis f. die Powershell eingetragen werden.
 ```json
