@@ -7,7 +7,7 @@ Natürlich muss ein Webserver mit PHP installiert sein!
 Pfad zur php.exe einstellen und ggf. shared Environments konfigurieren um unterschiedliche Konfigurationen zu testen!
 ```js
 {
-      // The path to a PHP 7+ executable.
+  // The path to a PHP 7+ executable.
   "php.executablePath": "c:\\Users\\jtutt\\OneDrive\\bin\\xampp\\php\\php.exe",
   "rest-client.environmentVariables": {
     "$shared": {
