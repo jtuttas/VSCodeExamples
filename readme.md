@@ -14,7 +14,7 @@ ecmel.vscode-html-css-0.2.0/             qinjia.view-in-browser-0.0.5/         w
 ```
 ## Konfiguration
 Meine Konfiguration
-```json
+```js
 {
     "editor.fontSize": 12,
     "workbench.colorTheme": "Dracula",
