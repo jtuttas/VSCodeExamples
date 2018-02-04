@@ -1,7 +1,7 @@
 # Konfigurationen f. Visual Studio Code
 Hier sind einige beispielhafte Konfigurationen von Visual Studio Code f. diverse Programmiersprachen 
 ## Extensions
-Meine Extension :
+Meine Extension (aus *{HOME}/.vscode/extensions*):
 ```
 GrapeCity.gc-excelviewer-2.0.17/         felixfbecker.php-intellisense-2.2.6/  rafaelmaiolla.remote-vscode-1.1.0/
 Mikael.angular-beastcode-5.2.10/         humao.rest-client-0.17.0/             redhat.java-0.18.1/
@@ -11,6 +11,58 @@ abusaidm.html-snippets-0.2.1/            ms-vscode.cpptools-0.14.6/            v
 donjayamanne.jquerysnippets-0.0.1/       ms-vscode.powershell-1.5.1/           vscjava.vscode-java-debug-0.6.0/
 dracula-theme.theme-dracula-2.8.0/       msjsdiag.debugger-for-chrome-4.1.0/   vscjava.vscode-java-pack-0.2.0/
 ecmel.vscode-html-css-0.2.0/             qinjia.view-in-browser-0.0.5/         wcwhitehead.bootstrap-3-snippets-0.1.0/
+```
+## Konfiguration
+Meine Konfiguration
+```json
+{
+    "editor.fontSize": 12,
+    "workbench.colorTheme": "Dracula",
+    "terminal.integrated.shell.windows": "cmd.exe",
+    "terminal.integrated.shellArgs.windows": [
+        "/k",
+        "c:\\Users\\jtutt\\OneDrive\\bin\\cmder\\vendor\\init.bat"
+    ],
+    "editor.mouseWheelZoom": true,
+    "git.confirmSync": false,
+    "files.exclude": {
+        "**/.git": true       
+    },
+    "powershell.powerShellExePath": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "python.disablePromptForFeatures": [
+        "pylint"
+    ],
+    "window.zoomLevel": 1,
+    //-------- Remote VSCode configuration --------
+    // Port number to use for connection.
+    "remote.port": 52698,
+
+    // Launch the server on start up.
+    "remote.onstartup": true,
+
+    // Address to listen on.
+    "remote.host": "127.0.0.1",
+    
+    // Arduiono Settings
+    "arduino.path": "c:\\Users\\jtutt\\OneDrive\\bin\\arduino-1.6.13",
+    "arduino.additionalUrls": "",
+    "arduino.logLevel": "info", 
+    "arduino.enableUSBDetection": true,
+    "C_Cpp.intelliSenseEngineFallback": "Disabled",
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+
+    // JAVA Plugin
+    "java.home": "C:\\Program Files\\Java\\jdk1.8.0_131",
+    "java.errors.incompleteClasspath.severity": "ignore",
+ 
+    
+    // Python
+    "python.pythonPath": "c:\\Users\\jtutt\\AppData\\Local\\Programs\\Python\\Python36-32\\",
+    "python.autoComplete.extraPaths": [],
+
+    // HTML
+    "extension.viewInBrowser":"chrome",
+}
 ```
 ## Tipps
 ### CMDER
