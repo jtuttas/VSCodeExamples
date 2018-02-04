@@ -1,0 +1,6 @@
+{
+    "python.linting.enabled": false,
+    // Python
+    "python.pythonPath": "c:\\Users\\jtutt\\AppData\\Local\\Programs\\Python\\Python36-32\\",
+    "python.autoComplete.extraPaths": [],
+}
