@@ -78,6 +78,7 @@ Meine Konfiguration
 In Anlehnung an [diesen Artikel](https://codepen.io/ginfuru/post/remote-editing-files-with-ssh "Google's Homepage")
 Um Remote VS Code zu verwenden (z.B. für den Raspberry PI) sollte in CMDER Aliasse eingerichtet werden (unter {cmder}/config/userer-aliases)
 ```
+code="%CMDER_ROOT%\..\VSCode\Code.exe" $*
 connect-pi2b= ssh -R 52698:127.0.0.1:52698 pi@service.joerg-tuttas.de -p 8201
 ```
 
