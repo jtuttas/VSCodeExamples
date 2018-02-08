@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>piRest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .my {
+            padding-top: 18pt;
+        }
+
+        #snackbar {
+            visibility: hidden;
+            /* Hidden by default. Visible on click */
+            min-width: 250px;
+            /* Set a default minimum width */
+            margin-left: -125px;
+            /* Divide value of min-width by 2 */
+            background-color: #333;
+            /* Black background color */
+            color: #fff;
+            /* White text color */
+            text-align: center;
+            /* Centered text */
+            border-radius: 2px;
+            /* Rounded borders */
+            padding: 16px;
+            /* Padding */
+            position: fixed;
+            /* Sit on top of the screen */
+            z-index: 1;
+            /* Add a z-index if needed */
+            left: 50%;
+            /* Center the snackbar */
+            bottom: 30px;
+            /* 30px from the bottom */
+        }
+
+        /* Show the snackbar when clicking on a button (class added with JavaScript) */
+
+        #snackbar.show {
+            visibility: visible;
+            /* Show the snackbar */
+            /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+However, delay the fade out process for 2.5 seconds */
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+
+        /* Animations to fade the snackbar in and out */
+
+        @-webkit-keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 style="text-align: center">PI GPIO Rest Client</h1>
+    </div>
+    <div class="row">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+        </div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            <label for="gpio">GPIO Port:</label>
+            <input type="number" name="gpio" id="gpio" class="form-control" value="18" min="1" max="40" step="1" title="GPIO Port">
+        </div>
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 my">
+            <button id="config" type="button" class="btn btn-warning">Config</button>
+            <button id="clear" type="button" class="btn btn-danger">Clear</button>
+            <button id="on" type="button" class="btn btn-primary">ON</button>
+            <button id="off" type="button" class="btn btn-primary">OFF</button>
+        </div>
+        <div id="snackbar">Some text some message..</div>
+    </div>
+    <script>
+
+        var url = "http://192.168.178.74:5000/gpio/api/v1.0/jsonp"
+
+        $("#config").click(function (e) {
+            var data = {
+                "port": $("#gpio").val()
+            }
+            console.log("Sende: "+JSON.stringify(data));            
+            $.ajax({
+                type: "GET",
+                url: url+"/post/"+$("#gpio").val(),
+                data: JSON.stringify(data),
+                jsonp: "callback",
+                dataType: "jsonp",
+                success: function (response) {
+                    console.log("SUCCESS:" + JSON.stringify(response));
+                    if (response.error) {
+                        $("#snackbar").text(response.error);
+                    }
+                    else {
+                        $("#snackbar").text("Set Port "+response.port+" to OUTPUT");
+                    }
+                    var x = document.getElementById("snackbar")
+                    x.className = "show";
+                    setTimeout(function () { x.className = x.className.replace("show", ""); }, 1000);
+                }
+            });
+        });
+        $("#clear").click(function (e) {
+            var data = {
+                "port": $("#gpio").val()
+            }
+            console.log("Sende: "+JSON.stringify(data));            
+            $.ajax({
+                type: "GET",
+                url: url+"/delete/"+$("#gpio").val(),
+                data: JSON.stringify(data),
+                jsonp: "callback",
+                dataType: "jsonp",
+                success: function (response) {
+                    console.log("SUCCESS:" + JSON.stringify(response));
+                    if (response.error) {
+                        $("#snackbar").text(response.error);
+                    }
+                    else {
+                        $("#snackbar").text("Cleared Port "+response.port);
+                    }
+                    var x = document.getElementById("snackbar")
+                    x.className = "show";
+                    setTimeout(function () { x.className = x.className.replace("show", ""); }, 1000);
+                }
+            });
+        });
+
+        $("#on").click(function (e) {
+            var data = {
+                "value": "1"
+            }
+            console.log("Sende: "+JSON.stringify(data));            
+            $.ajax({
+                type: "GET",
+                url: url+"/put/"+$("#gpio").val(),
+                data: JSON.stringify(data),
+                jsonp: "callback",
+                dataType: "jsonp",
+                success: function (response) {
+                    console.log("SUCCESS:" + JSON.stringify(response));
+                    if (response.error) {
+                        $("#snackbar").text(response.error);
+                    }
+                    else {
+                        $("#snackbar").text("Set Port "+response.port+" ON");
+                    }
+                    var x = document.getElementById("snackbar")
+                    x.className = "show";
+                    setTimeout(function () { x.className = x.className.replace("show", ""); }, 1000);
+                }
+            });
+        });
+
+        $("#off").click(function (e) {
+            var data = {
+                "value": "0"
+            }
+            console.log("Sende: "+JSON.stringify(data));            
+            $.ajax({
+                type: "GET",
+                url: url+"/put/"+$("#gpio").val(),
+                data: JSON.stringify(data),
+                jsonp: "callback",
+                dataType: "jsonp",
+                success: function (response) {
+                    console.log("SUCCESS:" + JSON.stringify(response));
+                    if (response.error) {
+                        $("#snackbar").text(response.error);
+                    }
+                    else {
+                        $("#snackbar").text("Set Port "+response.port+" OFF");
+                    }
+                    var x = document.getElementById("snackbar")
+                    x.className = "show";
+                    setTimeout(function () { x.className = x.className.replace("show", ""); }, 1000);
+                }
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

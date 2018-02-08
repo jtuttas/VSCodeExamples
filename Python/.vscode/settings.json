@@ -3,4 +3,15 @@
     // Python
     "python.pythonPath": "c:\\Users\\jtutt\\AppData\\Local\\Programs\\Python\\Python36-32\\",
     "python.autoComplete.extraPaths": [],
+    "rest-client.environmentVariables": {
+        "$shared": {
+            "version": "v1"
+        },
+        "local": {
+            "host": "localhost",
+        },
+        "production": {
+            "host": "192.168.178.74",
+        }
+    }
 }
