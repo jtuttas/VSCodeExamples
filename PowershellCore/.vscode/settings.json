@@ -1,3 +1,4 @@
 {
     "powershell.powerShellExePath": "C:\\Program Files\\Powershell\\6.0.0\\pwsh.exe",
+    "python.linting.enabled": false,
 }
