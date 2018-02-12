@@ -1,5 +1,13 @@
 # Konfigurationen f. Visual Studio Code
 Hier sind einige beispielhafte Konfigurationen von Visual Studio Code f. diverse Programmiersprachen 
+
+Um diese Konfiguration zu übenehmen installieren Sie die Erweiterung "Settings Sync" 
+[Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync "Setting Sync") und tragen Sie unter Einstellungen folgendes ein:
+```js
+    "sync.anonymousGist": true,
+```
+Anschließend wählen Sie *F1* und "Sync: Download Setting" und geben folgenden KEY ein *adb3caa5cf2c22028ccc68a5fb0ca6d7*.
+
 ## Extensions
 Meine Extension (aus *{HOME}/.vscode/extensions*):
 ```
@@ -75,7 +83,7 @@ Meine Konfiguration
     ],
 ```
 ### Remote VS Code
-In Anlehnung an [diesen Artikel](https://codepen.io/ginfuru/post/remote-editing-files-with-ssh "Google's Homepage")
+In Anlehnung an [diesen Artikel](https://codepen.io/ginfuru/post/remote-editing-files-with-ssh "VS Code Remote")
 Um Remote VS Code zu verwenden (z.B. für den Raspberry PI) sollte in CMDER Aliasse eingerichtet werden (unter {cmder}/config/userer-aliases)
 ```
 code="%CMDER_ROOT%\..\VSCode\Code.exe" $*
