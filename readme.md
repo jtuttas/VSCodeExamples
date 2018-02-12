@@ -6,7 +6,7 @@ Um diese Konfiguration zu übenehmen installieren Sie die Erweiterung "Settings 
 ```js
     "sync.anonymousGist": true,
 ```
-Anschließend wählen Sie *F1* und "Sync: Download Setting" und geben folgenden KEY ein *adb3caa5cf2c22028ccc68a5fb0ca6d7*.
+Anschließend wählen Sie *F1* und "Sync: Download Setting" und geben folgenden KEY ein *14863ffe635d372883192fda44c5efae*.
 
 ## Extensions
 Meine Extension (aus *{HOME}/.vscode/extensions*):
