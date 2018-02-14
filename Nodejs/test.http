@@ -1,6 +1,10 @@
 ### GET 
 http://localhost:8081/list/2
 
+### GET Powershell
+http://localhost:8081/powershell/*
+
+
 ### DELETE
 DELETE http://localhost:8081/del/2 HTTP/1.1
 
