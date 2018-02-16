@@ -10,11 +10,16 @@ Mit *F5* wird der Debugger gestartet. Mit *STRG-F5* wird lediglich das Programm 
 {
      // JAVA Plugin
      "java.home": "C:\\Program Files\\Java\\jdk1.8.0_131",
-     "java.errors.incompleteClasspath.severity": "ignore",
-  
 }
 ```
-## Sippets
+
+Am einfachsten man fängt mit dem Projekt als Maven Projekt an. Wenn maven installiert ist, so kann einfach über folgenden Befehl die notwendigen Dateien und Ordner erstellt werden (Wobei *Projektname* und *Paketname* durch sinnvolle Worte ergänz werden soll):
+
+```
+mvn archetype:generate -DartifactId=Projektname -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false -DgroupId=Paketname
+```
+
+## Snippets
 ```js
 {
     "Main Class": {

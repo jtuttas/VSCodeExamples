@@ -6,7 +6,7 @@ var config = {
     password: 'admin'
 }
 
-var sAMAccountName = 'FIAE17A.tmusterf';
+var sAMAccountName = 'FIAE17A.s*';
 
 // Find user by a sAMAccountName
 var ad = new ActiveDirectory(config);
@@ -29,3 +29,16 @@ ad.findUser(sAMAccountName, function (err, user) {
         }
     }
 });
+ad.authenticate("Kemmries@tuttas.de", "mmbbs", function(err, auth) {
+    if (err) {
+      console.log('ERROR: '+JSON.stringify(err));
+      return;
+    }
+    
+    if (auth) {
+      console.log('Authenticated!'+JSON.stringify(auth));
+    }
+    else {
+      console.log('Authentication failed!');
+    }
+  });
