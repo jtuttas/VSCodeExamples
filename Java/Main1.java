@@ -2,7 +2,6 @@ public class Main1 {
     String name;
 
     public Main1() {
-
     }
 
     /**
