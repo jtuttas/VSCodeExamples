@@ -7,4 +7,17 @@
                                  // the explore tree
 
     },
+    "rest-client.environmentVariables": {
+        "$shared": {
+            "version": "v1"
+        },
+        "local": {
+            "host": "localhost",
+            "port": "8081",
+        },
+        "azure": {
+            "host": "tuttas2-mmbbs-service.azurewebsites.net",
+            "port": "80",
+        }
+    }
 }

@@ -1,9 +1,11 @@
 {
   "name": "Nodejs",
-  "version": "1.0.0",
+  "version": "0.0.0",
+  "private": true,
   "description": "keine Extension notwendig\r ## Konfiguration\r keine besondere Konfiguration notwendig",
   "main": "test.js",
   "scripts": {
+    "start": "node test.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
