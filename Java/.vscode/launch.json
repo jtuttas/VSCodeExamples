@@ -12,6 +12,7 @@
             "console": "internalConsole",
             "stopOnEntry": false,
             "mainClass": "Main1",
+            "preLaunchTask": "Compile all Java Files",
             "classPaths": [
                 ".",
                 "${workspaceFolder}\\mysql-connector-java-5.1.46.jar"

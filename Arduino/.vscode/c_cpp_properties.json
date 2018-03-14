@@ -3,12 +3,14 @@
         {
             "name": "Win32",
             "includePath": [
-                "C:\\Users\\jtutt\\Documents\\Arduino\\hardware\\expressif\\esp32\\cores\\esp32"
+                "C:\\Users\\jtutt\\Documents\\Arduino\\hardware\\expressif\\esp32\\cores\\esp32",
+                "C:\\Users\\jtutt\\OneDrive\\bin\\arduino-1.6.13\\libraries"
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": false,
                 "path": [
-                    "C:\\Users\\jtutt\\Documents\\Arduino\\hardware\\expressif\\esp32\\cores\\esp32"
+                    "C:\\Users\\jtutt\\Documents\\Arduino\\hardware\\expressif\\esp32\\cores\\esp32",
+                    "C:\\Users\\jtutt\\OneDrive\\bin\\arduino-1.6.13\\libraries"
                 ]
             },
             "intelliSenseMode": "msvc-x64"

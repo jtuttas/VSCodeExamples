@@ -23,7 +23,7 @@ public class Main1 {
     }
 
     public static void main(String[] args) {
-        System.out.println("Hallo Welt!!!");
+        System.out.println("Hallo Welt!");
         Main1 m = new Main1();
         m.setName("test");
 
