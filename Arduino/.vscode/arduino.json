@@ -3,5 +3,5 @@
     "board": "expressif:esp32:esp32",
     "configuration": "FlashMode=qio,FlashFreq=80,FlashSize=4M,UploadSpeed=921600,DebugLevel=none",
     "sketch": "blink.ino",
-    "output": "../ArduinoOutput"
+    "output": "..\\ArduinoOutput"
 }
