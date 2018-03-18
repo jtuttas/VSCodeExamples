@@ -12,7 +12,7 @@ choco install plantuml
 ```
 
 Sind alle Fragen bei der Installation mit "y" beantwortet worden, steht das Plugin zur Verfügung.
-## Nutzen des Pluins
+## Nutzen des Plugins
 Es muss eine Datei mit dem Suffix *.wsd* erstellt werden (siehe Beispiele hier im Repositpory). Wird dann *ALT-D* gedrückt, wird das entsprechende UML Diagramm erzeugt.
 
 
