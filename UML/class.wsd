@@ -1,0 +1,10 @@
+@startuml
+class Spardose {
+    - sparziel:int
+    - inhalt:int
+
+    + Spardose(int)
+    + einzahlen(int):void
+    + sparzielErreicht():boolean
+    }
+@enduml

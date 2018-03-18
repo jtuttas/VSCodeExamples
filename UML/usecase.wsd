@@ -1,0 +1,9 @@
+@startuml
+actor Tuttas
+actor Schüler
+rectangle Schule {
+    Tuttas --> (Aufgabe Stellen)
+    (Aufgabe bearbeiten) .> (Aufgabe Stellen):include
+    Schüler --> (Aufgabe bearbeiten)
+}
+@enduml

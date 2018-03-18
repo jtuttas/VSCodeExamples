@@ -1,0 +1,4 @@
+@startuml
+client -> Server: GET-Request
+client <-- Server: XML Responce
+@enduml
