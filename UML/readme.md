@@ -1,4 +1,4 @@
-# UML mit Visual Studion Code
+# UML mit Visual Studio Code
 ## Vorbereitungen
 Zunächst muss das Plugin PlantUML installiert werden
 - [Plant UML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
