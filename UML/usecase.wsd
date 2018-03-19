@@ -1,9 +1,14 @@
 @startuml
-actor Tuttas
-actor Schüler
-rectangle Schule {
-    Tuttas --> (Aufgabe Stellen)
-    (Aufgabe bearbeiten) .> (Aufgabe Stellen):include
-    Schüler --> (Aufgabe bearbeiten)
+title Basic UseCase
+left to right direction 
+:Main Admin: as Admin
+User <|- Admin
+rectangle CAS <<extrenal>>
+rectangle System {
+User --- (Ein UseCase)
+(Ein UseCase) --> CAS : delegate
+(special Usecase) -|> (Ein UseCase)
+(Ein UseCase) .> (Included UserCase):<<include>>
+(Extended UseCasse) ..> (Ein UseCase):<<extends>>
 }
 @enduml

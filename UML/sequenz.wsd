@@ -1,4 +1,21 @@
 @startuml
+actor User
+User -> client: Start Application
+activate User
 client -> Server: GET-Request
+activate Server
+create Obj
+Server -> Obj: new()
+Server -> Server: test()
+alt successful case
+Server --> client: sucess    
+else some kind of failure
+Server --> client: failed
+end    
+deactivate Server
+Server ->> Obj:kill
+destroy Obj
 client <-- Server: XML Responce
+client ->> Server: async Call
+deactivate User
 @enduml

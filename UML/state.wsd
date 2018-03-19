@@ -1,0 +1,15 @@
+@startuml
+[*] --> Zustand1
+Zustand1 --> [*]
+Zustand1 : entry: Entry Aktion
+Zustand1 : do: Do Aktion
+Zustand1 : exit: Exit Aktion
+state Zustand5 <<choice>>
+Zustand1 ---> Zustand5 
+Zustand5 --> Zustand1: true
+Zustand5 ---> Zustand3: false
+Zustand3 -> Zustand1
+Zustand1 -> Zustand2: [Bedingung]
+Zustand2 -> Zustand2: [Bedingung]
+Zustand2 --> [*]
+@enduml

@@ -1,10 +1,28 @@
 @startuml
-class Spardose {
-    - sparziel:int
-    - inhalt:int
-
-    + Spardose(int)
-    + einzahlen(int):void
-    + sparzielErreicht():boolean
-    }
+abstract class Eltern <<abstract>> {
++{static} PUBLIC_STATIC_VARIABLE:int
+- privateVariable:String
+~ packagePrivateVariable:String
+# protectedVariable:String
+~packagePrivateMethod():int
++{abstract} abstractMethod(int param):int
++{static} staticMethod(int param):int
+}
+class Kind {
++ Kind(int)
+}
+class Assoziation {
+}
+class Assoziation2 {
+}
+class ImplementInterface {
++ InterfaceMethode():void
+}
+class Interface <<Interface>> {
+}
+Eltern <|-- Kind
+Kind "0..1" o-- "n" Assoziation2
+Kind *- Assoziation
+Kind .-> Interface: <<use>>
+ImplementInterface .-|> Interface
 @enduml

@@ -1,0 +1,4 @@
+state State1 <<choice>>
+[*] --> State1 : some test
+State1 --> State2 : true
+State1 --> State3 : false

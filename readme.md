@@ -1,24 +1,41 @@
 # Konfigurationen f. Visual Studio Code
 Hier sind einige beispielhafte Konfigurationen von Visual Studio Code f. diverse Programmiersprachen 
 
-Um diese Konfiguration zu übenehmen installieren Sie die Erweiterung "Settings Sync" 
-[Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync "Setting Sync") und tragen Sie unter Einstellungen folgendes ein:
-```js
-    "sync.anonymousGist": true,
-```
-Anschließend wählen Sie *F1* und "Sync: Download Setting" und geben folgenden KEY ein *14863ffe635d372883192fda44c5efae*.
-
 ## Extensions
-Meine Extension (aus *{HOME}/.vscode/extensions*):
+Meine Extension..
 ```
-GrapeCity.gc-excelviewer-2.0.17/         felixfbecker.php-intellisense-2.2.6/  rafaelmaiolla.remote-vscode-1.1.0/
-Mikael.angular-beastcode-5.2.10/         humao.rest-client-0.17.0/             redhat.java-0.18.1/
-PeterJausovec.vscode-docker-0.0.24/      johnpapa.angular2-2.12.0/             shakram02.bash-beautify-0.1.1/
-Zignd.html-css-class-completion-1.16.1/  ms-python.python-2018.1.0/            tht13.python-0.2.3/
-abusaidm.html-snippets-0.2.1/            ms-vscode.cpptools-0.14.6/            vsciot-vscode.vscode-arduino-0.2.10/
-donjayamanne.jquerysnippets-0.0.1/       ms-vscode.powershell-1.5.1/           vscjava.vscode-java-debug-0.6.0/
-dracula-theme.theme-dracula-2.8.0/       msjsdiag.debugger-for-chrome-4.1.0/   vscjava.vscode-java-pack-0.2.0/
-ecmel.vscode-html-css-0.2.0/             qinjia.view-in-browser-0.0.5/         wcwhitehead.bootstrap-3-snippets-0.1.0/
+  azure-account v0.3.3
+  bash-beautify v0.1.1
+  bootstrap-3-snippets v0.1.0
+  code-settings-sync v2.9.0
+  cpptools v0.15.0
+  debugger-for-chrome v4.2.1
+  githistory v0.4.0
+  html-css-class-completion v1.17.1
+  html-snippets v0.2.1
+  java v0.21.0
+  jquerysnippets v0.0.1
+  LiveServer v3.2.1
+  npm-intellisense v1.3.0
+  okazukiplantuml v0.2.2
+  php-intellisense v2.2.9
+  plantuml v2.5.5
+  PowerShell v1.6.0
+  python v0.2.3
+  python v2018.2.1
+  remote-vscode v1.1.0
+  rest-client v0.17.0
+  theme-dracula v2.9.0
+  vscode-arduino v0.2.11
+  vscode-azureappservice v0.6.1
+  vscode-cosmosdb v0.5.0
+  vscode-docker v0.0.25
+  vscode-html-css v0.2.0
+  vscode-java-debug v0.7.0
+  vscode-java-pack v0.3.0
+  vscode-java-test v0.4.0
+  vscode-mysql v0.3.0
+  vscode-npm-script v0.3.3
 ```
 ## Konfiguration
 Meine Konfiguration
@@ -27,6 +44,7 @@ Meine Konfiguration
     "editor.fontSize": 12,
     "workbench.colorTheme": "Dracula",
     "terminal.integrated.shell.windows": "cmd.exe",
+    // Diese Einstellungen sind nur wenn cmder genutzt wird, sonst kann dieses hier gelöscht werden
     "terminal.integrated.shellArgs.windows": [
         "/k",
         "c:\\Users\\jtutt\\OneDrive\\bin\\cmder\\vendor\\init.bat"
@@ -34,9 +52,10 @@ Meine Konfiguration
     "editor.mouseWheelZoom": true,
     "git.confirmSync": false,
     "files.exclude": {
-        "**/.git": true       
+        "**/.git": true,
     },
-    "powershell.powerShellExePath": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    // Pfad zur Powershell!
+    "powershell.powerShellExePath": "C:\\WINDOWS\\SysWow64\\WindowsPowerShell\\v1.0\\powershell.exe",
     "python.disablePromptForFeatures": [
         "pylint"
     ],
@@ -44,32 +63,50 @@ Meine Konfiguration
     //-------- Remote VSCode configuration --------
     // Port number to use for connection.
     "remote.port": 52698,
-
     // Launch the server on start up.
     "remote.onstartup": true,
-
     // Address to listen on.
     "remote.host": "127.0.0.1",
-    
-    // Arduiono Settings
+    // Arduiono Settings (Pfad zur Arduino IDE)
     "arduino.path": "c:\\Users\\jtutt\\OneDrive\\bin\\arduino-1.6.13",
     "arduino.additionalUrls": "",
-    "arduino.logLevel": "info", 
+    "arduino.logLevel": "info",
     "arduino.enableUSBDetection": true,
-    "C_Cpp.intelliSenseEngineFallback": "Disabled",
-    "C_Cpp.intelliSenseEngine": "Tag Parser",
-
     // JAVA Plugin
+    // Pfad zur Java JDK
     "java.home": "C:\\Program Files\\Java\\jdk1.8.0_131",
-    "java.errors.incompleteClasspath.severity": "ignore",
- 
-    
     // Python
+    // Pfad zur Python Executable
     "python.pythonPath": "c:\\Users\\jtutt\\AppData\\Local\\Programs\\Python\\Python36-32\\",
     "python.autoComplete.extraPaths": [],
-
     // HTML
-    "extension.viewInBrowser":"chrome",
+    "view-in-browser.customBrowser": "chrome",
+    "git.enableSmartCommit": true,
+    // Sync setting
+    "sync.gist": "0c034bdc6361c92b3c233e9cdb0de18f",
+    "sync.lastUpload": "2018-03-18T18:45:35.137Z",
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.lastDownload": "2018-02-12T08:30:52.036Z",
+    "sync.forceDownload": false,
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "sync.quietSync": false,
+    "sync.askGistName": false,
+    // Path to the Mongo shell executable
+    "mongo.shell.path": "C:\\Program Files\\MongoDB\\bin",
+    "cosmosDB.showSavePrompt": false,
+    // Misc
+    "explorer.confirmDelete": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "files.autoSave": "onFocusChange",
+    "sync.removeExtensions": true,
+    "sync.syncExtensions": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "liveServer.settings.donotVerifyTags": true,
+    "plantuml.render": "PlantUMLServer",
+    "plantuml.server": "http://www.plantuml.com/plantuml",
 }
 ```
 ## Tipps
@@ -100,11 +137,13 @@ Dann sollte noch ein alias eingerichtet werden z.B. unter */etc/profile*
 alias code='rmate -p 52698'
 ```
 ## Videos
+### Einsatz von VS Code im 1. bis 3. AJ
+[![1Aj bis 3AJ](http://img.youtube.com/vi/Fzd6rFyOPVs/0.jpg)](http://www.youtube.com/watch?v=Fzd6rFyOPVs)
+### Remote eine HTML Seite auf dem Raspberry PI editieren
 [![Remote HTML Page](http://img.youtube.com/vi/l5Y_P8w07PY/0.jpg)](http://www.youtube.com/watch?v=l5Y_P8w07PY)
-
-
+### ESP32 Programmieren
 [![ESP 32](http://img.youtube.com/vi/pG5JEoUC2Hc/0.jpg)](http://www.youtube.com/watch?v=pG5JEoUC2Hc)
-
+### Powershell Core auf dem Raspberry PI
 [![Powershell Core](http://img.youtube.com/vi/WO0DqRpR5hs/0.jpg)](http://www.youtube.com/watch?v=WO0DqRpR5hs)
 
 
