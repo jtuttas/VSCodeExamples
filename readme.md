@@ -2,114 +2,53 @@
 Hier sind einige beispielhafte Konfigurationen von Visual Studio Code f. diverse Programmiersprachen 
 
 ## Extensions
-Meine Extension..
+Meine Extension, aus .vscode/Extensions, angezeigt mit *code --list-extensions*.
 ```
-  azure-account v0.3.3
-  bash-beautify v0.1.1
-  bootstrap-3-snippets v0.1.0
-  code-settings-sync v2.9.0
-  cpptools v0.15.0
-  debugger-for-chrome v4.2.1
-  githistory v0.4.0
-  html-css-class-completion v1.17.1
-  html-snippets v0.2.1
-  java v0.21.0
-  jquerysnippets v0.0.1
-  LiveServer v3.2.1
-  npm-intellisense v1.3.0
-  okazukiplantuml v0.2.2
-  php-intellisense v2.2.9
-  plantuml v2.5.5
-  PowerShell v1.6.0
-  python v0.2.3
-  python v2018.2.1
-  remote-vscode v1.1.0
-  rest-client v0.17.0
-  theme-dracula v2.9.0
-  vscode-arduino v0.2.11
-  vscode-azureappservice v0.6.1
-  vscode-cosmosdb v0.5.0
-  vscode-docker v0.0.25
-  vscode-html-css v0.2.0
-  vscode-java-debug v0.7.0
-  vscode-java-pack v0.3.0
-  vscode-java-test v0.4.0
-  vscode-mysql v0.3.0
-  vscode-npm-script v0.3.3
+abusaidm.html-snippets
+christian-kohler.npm-intellisense
+christian-kohler.path-intellisense
+donjayamanne.githistory
+donjayamanne.jquerysnippets
+dracula-theme.theme-dracula
+ecmel.vscode-html-css
+eg2.vscode-npm-script
+felixfbecker.php-intellisense
+formulahendry.azure-virtual-machine-explorer
+formulahendry.vscode-mysql
+humao.rest-client
+jebbs.plantuml
+johnpapa.Angular2
+mongoose-os.mongoose-os-ide
+ms-azuretools.vscode-azureappservice
+ms-azuretools.vscode-azurefunctions
+ms-azuretools.vscode-cosmosdb
+ms-mssql.mssql
+ms-python.python
+ms-vscode.azure-account
+ms-vscode.azurecli
+ms-vscode.cpptools
+ms-vscode.PowerShell
+msjsdiag.debugger-for-chrome
+natewallace.angular2-inline
+okazuki.okazukiplantuml
+PeterJausovec.vscode-docker
+platformio.platformio-ide
+rafaelmaiolla.remote-vscode
+ritwickdey.LiveServer
+shakram02.bash-beautify
+Shan.code-settings-sync
+tht13.python
+vsciot-vscode.azure-iot-toolkit
+vscjava.vscode-java-debug
+vscjava.vscode-java-pack
+vscjava.vscode-java-test
+wcwhitehead.bootstrap-3-snippets
+webfreak.debug
+Zignd.html-css-class-completion
 ```
-## Konfiguration
-Meine Konfiguration
-```js
-{
-    "editor.fontSize": 12,
-    "workbench.colorTheme": "Dracula",
-    "terminal.integrated.shell.windows": "cmd.exe",
-    // Diese Einstellungen sind nur wenn cmder genutzt wird, sonst kann dieses hier gelöscht werden
-    "terminal.integrated.shellArgs.windows": [
-        "/k",
-        "c:\\Users\\jtutt\\OneDrive\\bin\\cmder\\vendor\\init.bat"
-    ],
-    "editor.mouseWheelZoom": true,
-    "git.confirmSync": false,
-    "files.exclude": {
-        "**/.git": true,
-    },
-    // Pfad zur Powershell!
-    "powershell.powerShellExePath": "C:\\WINDOWS\\SysWow64\\WindowsPowerShell\\v1.0\\powershell.exe",
-    "python.disablePromptForFeatures": [
-        "pylint"
-    ],
-    "window.zoomLevel": 1,
-    //-------- Remote VSCode configuration --------
-    // Port number to use for connection.
-    "remote.port": 52698,
-    // Launch the server on start up.
-    "remote.onstartup": true,
-    // Address to listen on.
-    "remote.host": "127.0.0.1",
-    // Arduiono Settings (Pfad zur Arduino IDE)
-    "arduino.path": "c:\\Users\\jtutt\\OneDrive\\bin\\arduino-1.6.13",
-    "arduino.additionalUrls": "",
-    "arduino.logLevel": "info",
-    "arduino.enableUSBDetection": true,
-    // JAVA Plugin
-    // Pfad zur Java JDK
-    "java.home": "C:\\Program Files\\Java\\jdk1.8.0_131",
-    // Python
-    // Pfad zur Python Executable
-    "python.pythonPath": "c:\\Users\\jtutt\\AppData\\Local\\Programs\\Python\\Python36-32\\",
-    "python.autoComplete.extraPaths": [],
-    // HTML
-    "view-in-browser.customBrowser": "chrome",
-    "git.enableSmartCommit": true,
-    // Sync setting
-    "sync.gist": "0c034bdc6361c92b3c233e9cdb0de18f",
-    "sync.lastUpload": "2018-03-18T18:45:35.137Z",
-    "sync.autoDownload": false,
-    "sync.autoUpload": false,
-    "sync.lastDownload": "2018-02-12T08:30:52.036Z",
-    "sync.forceDownload": false,
-    "sync.host": "",
-    "sync.pathPrefix": "",
-    "sync.quietSync": false,
-    "sync.askGistName": false,
-    // Path to the Mongo shell executable
-    "mongo.shell.path": "C:\\Program Files\\MongoDB\\bin",
-    "cosmosDB.showSavePrompt": false,
-    // Misc
-    "explorer.confirmDelete": false,
-    "workbench.startupEditor": "newUntitledFile",
-    "files.autoSave": "onFocusChange",
-    "sync.removeExtensions": true,
-    "sync.syncExtensions": true,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "java.errors.incompleteClasspath.severity": "ignore",
-    "liveServer.settings.donotVerifyTags": true,
-    "plantuml.render": "PlantUMLServer",
-    "plantuml.server": "http://www.plantuml.com/plantuml",
-}
-```
-## Tipps
+## Tips
+### Azure
+Wird die Azure CLI verwendet, so muss diese erst angemeldet werden, dieses geschieht über den Befehl *az login* anshcließend muss auf der angezeigten Webseite der angezeigte Code eingegeben werden.
 ### CMDER
 *cmder* kann als Terminal installiert werden, dazu folgende Einstellungen ändern:
 ```json
