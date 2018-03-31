@@ -66,7 +66,7 @@ code="%CMDER_ROOT%\..\VSCode\Code.exe" $*
 connect-pi2b= ssh -R 52698:127.0.0.1:52698 pi@service.joerg-tuttas.de -p 8201
 ```
 
-Auf dem PI muss *rcode* installiert werden!
+Auf dem PI muss *rmate* installiert werden!
 ```bash
 sudo wget -O /usr/local/bin/rcode https://raw.github.com/aurora/rmate/master/rmate
 chmod a+x /usr/local/bin/rmate
