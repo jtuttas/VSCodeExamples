@@ -69,7 +69,7 @@ connect-pi2b= ssh -R 52698:127.0.0.1:52698 pi@service.joerg-tuttas.de -p 8201
 Auf dem PI muss *rcode* installiert werden!
 ```bash
 sudo wget -O /usr/local/bin/rcode https://raw.github.com/aurora/rmate/master/rmate
-chmod a+x /usr/local/bin/rcode
+chmod a+x /usr/local/bin/rmate
 ```
 Dann sollte noch ein alias eingerichtet werden z.B. unter */etc/profile*
 ```bash
@@ -78,6 +78,8 @@ alias code='rmate -p 52698'
 ## Videos
 ### Einsatz von VS Code im 1. bis 3. AJ
 [![1Aj bis 3AJ](http://img.youtube.com/vi/Fzd6rFyOPVs/0.jpg)](http://www.youtube.com/watch?v=Fzd6rFyOPVs)
+### VS Code und Azure
+[![1Aj bis 3AJ](http://img.youtube.com/vi/uKqMbRh3Aoo/0.jpg)](http://www.youtube.com/watch?v=uKqMbRh3Aoo)
 ### Remote eine HTML Seite auf dem Raspberry PI editieren
 [![Remote HTML Page](http://img.youtube.com/vi/l5Y_P8w07PY/0.jpg)](http://www.youtube.com/watch?v=l5Y_P8w07PY)
 ### ESP32 Programmieren
