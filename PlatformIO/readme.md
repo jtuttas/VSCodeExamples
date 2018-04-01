@@ -27,7 +27,7 @@ Werden Libraries importiert, so landen diese im Verzeichnis **{Home}/.platformio
                     ""
                 ]
             },
-
+            etc......
 ```
 
 ## Video

@@ -49,6 +49,9 @@ Zignd.html-css-class-completion
 ## Tips
 ### Azure
 Wird die Azure CLI verwendet, so muss diese erst angemeldet werden, dieses geschieht über den Befehl *az login* anschließend muss auf der angezeigten Webseite der angezeigte Code eingegeben werden.
+
+Die MS Azure Extensions müssen ebenso angemeldet sein, dieses geschieht über den Befehl (also *F1* drücken) und dann *Azure Sign in*.
+
 ### CMDER
 *cmder* kann als Terminal installiert werden, dazu folgende Einstellungen ändern:
 ```json
