@@ -8,7 +8,7 @@ Die Geschwindigkeit der seriellen Schnittstelle kann über in der Datei *platfor
 monitor_baud = 115200
 ```
 
-Werden Libaries importiert, so landen diese im Verzeichnis **{Home}/.platformio/lib/** , damit Intellisense funktioniert müssen diese Libraries (die .h Dateien) in der Datei  *c_cpp_propoerties.json* mit eingefügt werden und zwar unter *includePath* und *browse.path*. 
+Werden Libraries importiert, so landen diese im Verzeichnis **{Home}/.platformio/lib/** , damit Intellisense funktioniert müssen diese Libraries (die .h Dateien) in der Datei  *c_cpp_propoerties.json* mit eingefügt werden und zwar unter *includePath* und *browse.path*. 
 ```json
     "configurations": [
         {
@@ -23,7 +23,7 @@ Werden Libaries importiert, so landen diese im Verzeichnis **{Home}/.platformio/
                 "databaseFilename": "${workspaceRoot}/.vscode/.browse.c_cpp.db",
                 "path": [
                     "C:/Users/jtutt/.platformio/packages/tool-unity",
-                     "C:/Users/jtutt/.platformio/lib/PubSubClient_ID89/src",
+                    "C:/Users/jtutt/.platformio/lib/PubSubClient_ID89/src",
                     ""
                 ]
             },

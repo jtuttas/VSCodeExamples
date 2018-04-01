@@ -1,5 +1,5 @@
 # Konfigurationen f. Visual Studio Code
-Hier sind einige beispielhafte Konfigurationen von Visual Studio Code f. diverse Programmiersprachen 
+Hier sind einige beispielhafte Konfigurationen von Visual Studio Code f. diverse Programmiersprachen (siehe readme.md in den einzelnen Unterordnern).
 
 ## Extensions
 Meine Extension, aus .vscode/Extensions, angezeigt mit *code --list-extensions*.
@@ -48,7 +48,7 @@ Zignd.html-css-class-completion
 ```
 ## Tips
 ### Azure
-Wird die Azure CLI verwendet, so muss diese erst angemeldet werden, dieses geschieht über den Befehl *az login* anshcließend muss auf der angezeigten Webseite der angezeigte Code eingegeben werden.
+Wird die Azure CLI verwendet, so muss diese erst angemeldet werden, dieses geschieht über den Befehl *az login* anschließend muss auf der angezeigten Webseite der angezeigte Code eingegeben werden.
 ### CMDER
 *cmder* kann als Terminal installiert werden, dazu folgende Einstellungen ändern:
 ```json
