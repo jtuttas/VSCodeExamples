@@ -1,5 +1,5 @@
-author: mongoose-os
-description: A JS-enabled demo Mongoose OS firmware
+author: tuttas
+description: A JS build with DS180B2 temperature Sensor
 # arch: PLATFORM
 version: 1.0
 manifest_version: 2017-05-18
