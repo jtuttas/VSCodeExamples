@@ -8,8 +8,8 @@ Die Geschwindigkeit der seriellen Schnittstelle kann über in der Datei *platfor
 monitor_baud = 115200
 ```
 
-Werden Libraries importiert, so landen diese im Verzeichnis **{Home}/.platformio/lib/** , damit Intellisense funktioniert müssen diese Libraries (die .h Dateien) in der Datei  *c_cpp_propoerties.json* mit eingefügt werden und zwar unter *includePath* und *browse.path*. 
-```json
+Werden Libraries importiert, so landen diese im Verzeichnis **{Home}/.platformio/lib/** , damit Intellisense funktioniert müssen diese Libraries (die .h Dateien) in der Datei  *c_cpp_propoerties.json* bekannt gemacht werden, d.h. der Pfad zu diesen Dateien mit eingefügt werden und zwar unter *includePath* und *browse.path*. 
+```js
     "configurations": [
         {
             "name": "Win32",
@@ -27,7 +27,9 @@ Werden Libraries importiert, so landen diese im Verzeichnis **{Home}/.platformio
                     ""
                 ]
             },
-            etc......
+            //etc......
 ```
 
 ## Video
+### Platform IO mit ESP32 
+[![1Aj bis 3AJ](http://img.youtube.com/vi/vkuoOES5KHg/0.jpg)](http://www.youtube.com/watch?v=vkuoOES5KHg)
