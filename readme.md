@@ -61,12 +61,6 @@ Die MS Azure Extensions müssen ebenso angemeldet sein, dieses geschieht über d
         "c:\\Users\\jtutt\\OneDrive\\bin\\cmder\\vendor\\init.bat"
     ],
 ```
-### PlatformIO
-Da ich nicht ständig will, dass Platform IO startet, empfiehlt es sich folgende Einstellung zu setzten:
-```js
- // Activate extension only when PlatformIO-based project (with `platformio.ini`) is opened in workspace
-  "platformio-ide.activateOnlyOnPlatformIOProject": true,
-```
 Damit startet Platform IO nur, wenn sich in dem Verzeichnis die Datei *platformio.ini* befindet.
 ### Remote VS Code
 In Anlehnung an [diesen Artikel](https://codepen.io/ginfuru/post/remote-editing-files-with-ssh "VS Code Remote")
