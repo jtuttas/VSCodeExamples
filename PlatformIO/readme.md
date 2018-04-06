@@ -13,6 +13,7 @@ Da ich nicht ständig will, dass Platform IO startet, empfiehlt es sich folgende
  // Activate extension only when PlatformIO-based project (with `platformio.ini`) is opened in workspace
   "platformio-ide.activateOnlyOnPlatformIOProject": true,
 ```
+Damit startet Platform IO nur, wenn sich in dem Verzeichnis die Datei *platformio.ini* befindet.
 
 Werden Libraries importiert, so landen diese im Verzeichnis **{Home}/.platformio/lib/** , damit Intellisense funktioniert muss der Pfad zu den importierten Libraries (die .h Dateien) in der Datei  *c_cpp_propoerties.json* bekannt gemacht werden und zwar unter *includePath* und *browse.path*. 
 ```js

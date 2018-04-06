@@ -61,7 +61,7 @@ Die MS Azure Extensions müssen ebenso angemeldet sein, dieses geschieht über d
         "c:\\Users\\jtutt\\OneDrive\\bin\\cmder\\vendor\\init.bat"
     ],
 ```
-Damit startet Platform IO nur, wenn sich in dem Verzeichnis die Datei *platformio.ini* befindet.
+
 ### Remote VS Code
 In Anlehnung an [diesen Artikel](https://codepen.io/ginfuru/post/remote-editing-files-with-ssh "VS Code Remote")
 Um Remote VS Code zu verwenden (z.B. für den Raspberry PI) sollte in CMDER Aliasse eingerichtet werden (unter {cmder}/config/userer-aliases)
