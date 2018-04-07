@@ -79,6 +79,13 @@ Dann sollte noch ein alias eingerichtet werden z.B. unter */etc/profile*
 ```bash
 alias code='rmate -p 52698'
 ```
+
+## Umgebungsvariablen im System
+Ein 'schön' eingerichteter Rechner sollte folgende Umgebungsvariablen richtig gesetzt haben:
+```
+JAVA_HOME ... auf JDK
+PATH ... auf npm ({User}/AppData/Roaming/npm), python (auf python.exe), maven (auf mvn.exe), MongoDB (auf mongo.exe), mongoose-os, NuGet.exe, JavaJSK/bin
+```
 ## Videos
 ### Einsatz von VS Code im 1. bis 3. AJ
 [![1Aj bis 3AJ](http://img.youtube.com/vi/Fzd6rFyOPVs/0.jpg)](http://www.youtube.com/watch?v=Fzd6rFyOPVs)
