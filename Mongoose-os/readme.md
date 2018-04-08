@@ -62,3 +62,16 @@ Die WLAN Konfiguration kann entweder unter Expert-View eingestellt werden, oder 
 
 ## Sonstiges
 Ansonsten wird das Image erzeugt über den Befehl *mos build --platform esp32*
+
+## Intellisense
+Damit Intellisense funktioniet müssen die verwendeten Libraries im .js bekannt gemacht werden.
+```
+/// <reference path="../build/fs/api_config.js" />
+/// <reference path="../build/fs/api_mqtt.js" />
+/// <reference path="../build/fs/api_sys.js" />
+/// <reference path="../build/fs/api_timer.js" />
+/// <reference path="../build/fs/api_rpc.js" />
+/// <reference path="../build/fs/api_gpio.js" />
+/// <reference path="../build/fs/api_arduino_onewire.js" />
+/// <reference path="../build/fs/api_arduino_dallas_temp.js" />
+```

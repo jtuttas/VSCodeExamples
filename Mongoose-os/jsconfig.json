@@ -1,0 +1,7 @@
+{
+    "include": [        
+        "fs/**/*",
+        "build/fs/**/*",
+        "build/fs/api_gpio.js"
+    ]
+}

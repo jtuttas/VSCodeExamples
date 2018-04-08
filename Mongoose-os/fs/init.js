@@ -1,3 +1,12 @@
+/// <reference path="../build/fs/api_config.js" />
+/// <reference path="../build/fs/api_mqtt.js" />
+/// <reference path="../build/fs/api_sys.js" />
+/// <reference path="../build/fs/api_timer.js" />
+/// <reference path="../build/fs/api_rpc.js" />
+/// <reference path="../build/fs/api_gpio.js" />
+/// <reference path="../build/fs/api_arduino_onewire.js" />
+/// <reference path="../build/fs/api_arduino_dallas_temp.js" />
+
 load('api_config.js');
 load('api_mqtt.js');
 load('api_sys.js');
@@ -30,6 +39,7 @@ GPIO.set_mode(pin, GPIO.MODE_OUTPUT);
 // This function reads data from the DS sensors every 2 seconds
 Timer.set(1000 /* milliseconds */, Timer.REPEAT, function () {
   if (n === 0) {
+    
     n = dt.getDeviceCount();
     print('Sensors found:', n);
 

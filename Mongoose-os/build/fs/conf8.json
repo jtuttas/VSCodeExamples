@@ -1,0 +1,19 @@
+{
+  "wifi": {
+    "sta": {
+      "enable": true,         
+      "ssid": "FRITZ!Box Fon WLAN 7390",          
+      "pass": "9621935071973051",            
+      "user": "",            
+      "anon_identity": "",  
+      "cert": "",        
+      "key": "",           
+      "ca_cert": "",       
+      "ip": "",          
+      "netmask": "",     
+      "gw": "",          
+      "nameserver": "",   
+      "dhcp_hostname": ""   
+    }
+  }
+}
