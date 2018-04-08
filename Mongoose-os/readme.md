@@ -29,7 +29,7 @@ libs:
 
 Am einfachsten man cloned dieses Repository, um alle Dateien zu haben:
 ```
-git clone https://github.com/mongoose-os-libs/js-demo-bundle.git
+git clone https://github.com/mongoose-os-apps/demo-js
 ```
 
 Anschließend kann unten in der MenuLeiste der COM Port eingestellt und die IP Adresse konfiguriert werden!
