@@ -16,7 +16,7 @@ load('api_gpio.js');
 load('api_arduino_onewire.js');
 load('api_arduino_dallas_temp.js');
 
-let topic = 'devices/' + Cfg.get('device.id') + '/messages/events/';
+let topic = 'esp/temp';
 let subtopic = 'devices/' + Cfg.get('device.id') + '/sub/events/#';
 let oneWirePin = 5;
 let pin = 4;
@@ -39,7 +39,6 @@ GPIO.set_mode(pin, GPIO.MODE_OUTPUT);
 // This function reads data from the DS sensors every 2 seconds
 Timer.set(1000 /* milliseconds */, Timer.REPEAT, function () {
   if (n === 0) {
-    
     n = dt.getDeviceCount();
     print('Sensors found:', n);
 
@@ -67,11 +66,16 @@ Timer.set(1000 /* milliseconds */, Timer.REPEAT, function () {
 }, null);
 
 // Receive MQTT Messages from Azure
-MQTT.sub('devices/' + Cfg.get('device.id') + '/messages/devicebound/#', function (conn, topic, msg) {
+MQTT.sub('handy/led', function (conn, topic, msg) {
   print('Topic:', topic, 'message:', msg);
-  let obj = JSON.parse(msg);
-  ledstate = obj.state
-  GPIO.write(pin, obj.state);
+  if (msg==="1") {
+    GPIO.write(pin, 1);
+    ledstate=1;
+  }
+  else {
+    GPIO.write(pin, 0);
+    ledstate=0;
+  }
 }, null);
 
 
