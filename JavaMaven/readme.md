@@ -32,3 +32,13 @@ Die pom.xml muss geändert werden, so dass JUNIT4 geladen wird.
 ```
 ## Ergebnis
 ![Junit4](junit.gif "Unit Tests")
+
+## Tips
+Kommt es zu einem Fehler beim Starten des Debuggers *Build failed, do you whant to continue?* empfiehlt es sich das Verzeichnis WorkspaceStorage zu löschen. Dieses befindet sich..
+
+-Windows : ```%APPDATA%\Code[ - Variant]\User\workspaceStorage\```
+-MacOS : ```$HOME/Library/Application Support/Code[ - Variant]/User/workspaceStorage/```
+-Linux : ```$HOME/.config/Code[ - Variant]/User/workspaceStorage/```
+
+Weitere Hinweise auf den Fehler lassen sich auch finden in der Console unter *Ausgabe/Debugger for Java*.
+
