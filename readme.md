@@ -47,7 +47,7 @@ wcwhitehead.bootstrap-3-snippets
 webfreak.debug
 Zignd.html-css-class-completion
 ```
-## Tips
+## Tipps
 ### Azure
 Wird die Azure CLI verwendet, so muss diese erst angemeldet werden, dieses geschieht über den Befehl *az login* anschließend muss auf der angezeigten Webseite der angezeigte Code eingegeben werden.
 
