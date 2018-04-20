@@ -66,6 +66,10 @@ Um das Programm zu starten kann dann die normale launch.json verwendet werden. W
 }
 ``` 
 
+## Tipps
+Kommt es zu einem Fehler beim Starten des Debuggers *Build failed, do you whant to continue?* liegt ein Compilerfehler vor, welcher genau steht in der Console unter *Ausgabe/Debugger for Java*.
+
+
 ## Snippets
 ```js
 {
