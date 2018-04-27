@@ -6,19 +6,16 @@
 ## Hotkeys
 Mit *F5* wird der Debugger gestartet. Mit *STRG-F5* wird lediglich das Programm ausgeführt.
 ## Konfiguration
+### Einstellungen
+Hier muss der Pfad zur Java-Home auf das JDK richtig eingestellt werden.
 ```js
 {
      // JAVA Plugin
      "java.home": "C:\\Program Files\\Java\\jdk1.8.0_131",
 }
 ```
-
-Am einfachsten man fängt mit dem Projekt als Maven Projekt an. Wenn maven installiert ist, so kann einfach über folgenden Befehl die notwendigen Dateien und Ordner erstellt werden (Wobei *Projektname* und *Paketname* durch sinnvolle Worte ergänz werden soll):
-
-```
-mvn archetype:generate -DartifactId=Projektname -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false -DgroupId=Paketname
-```
-Ist es nicht möglich ein Maven-Projekt anzulegen, so bietet sich immer noch die Möglichkeit die Java Class Dateien durch den javac Compiler erzeugen. Hierzu muss ein Build Task erzeugt werden, z.B. wie folgt:
+### Build Task Erzeugen
+Die Java-Dateien müssen mit Hilfe des Java-Compilers übersetzt werden, dazu wird folgender Build Task (*tasks,json*) angelegt:
 ```
 {
     "version": "2.0.0",
@@ -35,20 +32,26 @@ Ist es nicht möglich ein Maven-Projekt anzulegen, so bietet sich immer noch die
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
+            },
+            "presentation": {
+                "reveal": "never",
+                "focus": false
+            },
+           
         }
     ]
 } 
 ```
-Dieser Build Task kann gestartet werden mittels *STRG+SHIFT+B*.
+Dabei ist darauf zu achten, dass *command* den Java-Compiler *javac.exe* korrekt startet. Dieser Build Task kann gestartet werden mittels *STRG+SHIFT+B*.
 
-Um das Programm zu starten kann dann die normale launch.json verwendet werden. Wobei über das Attribut classPaths auch JAR Files mit angegeben werden können (wie in unterem Beispiel z.B. ein MySQL Connector).
+### Automatisches Ausführen des BuildTasks
+Um das Programm zu starten kann dann die normale *launch.json* verwendet werden. Wobei über das Attribut *classPaths* auch JAR Files mit angegeben werden können (wie in unterem Beispiel z.B. ein MySQL Connector). Damit der Build Task automatisch gestartet wird, bevor der Debugger startet muss in *preLaunchTask* der Name des Tasks angegeben werden. In *mainClass* muss der Name der Klasse eingetragen werden, die die main-Methode enthält.
 ```
 {
 
     "version": "0.2.0",
     "configurations": [       
-        {
+       {
             "type": "java",
             "name": "Debug (Launch)-Main1",
             "request": "launch",
@@ -56,17 +59,29 @@ Um das Programm zu starten kann dann die normale launch.json verwendet werden. W
             "console": "internalConsole",
             "stopOnEntry": false,
             "mainClass": "Main1",
+            "preLaunchTask": "Compile all Java Files",
             "classPaths": [
                 ".",
                 "${workspaceFolder}\\mysql-connector-java-5.1.46.jar"
             ],
             "args": ""
-        }       
+        }  
     ]
 }
 ``` 
 
+Anschließend kann via *F5* das Programm kompiliert und gestartet werden!
+
 ## Tipps
+Damit die kompilierten class Dateien nicht im Editor erscheinen, können diese ausgebelden werden über folgenden Eintrag in den Einstellungen:
+```
+     "files.exclude": {
+         "*.class":true
+     },
+
+```
+
+
 Kommt es zu einem Fehler beim Starten des Debuggers *Build failed, do you whant to continue?* liegt ein Compilerfehler vor, welcher genau steht in der Console unter *Ausgabe/Debugger for Java*.
 
 
