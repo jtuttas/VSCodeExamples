@@ -1,7 +1,7 @@
 {
      // JAVA Plugin
-     "java.home": "JAVA_HOME",
      "files.exclude": {
          "*.class":true
      },
+
 }

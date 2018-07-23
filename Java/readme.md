@@ -1,30 +1,26 @@
 # Java Beispiel
-## Extensions
-- [Java Extension Pack (inkludiert die beiden unteren Extensions)](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
-- [Debugger for JAVA](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug)
-- [Language Support for Java](https://marketplace.visualstudio.com/items?itemName=redhat.java)
-## Hotkeys
-Mit *F5* wird der Debugger gestartet. Mit *STRG-F5* wird lediglich das Programm ausgeführt.
-## Konfiguration
-### Einstellungen
-Hier muss der Pfad zur Java-Home auf das JDK richtig eingestellt werden.
-```js
-{
-     // JAVA Plugin
-     "java.home": "C:\\Program Files\\Java\\jdk1.8.0_131",
-}
-```
-### Build Task Erzeugen
-Die Java-Dateien müssen mit Hilfe des Java-Compilers übersetzt werden, dazu wird folgender Build Task (*tasks,json*) angelegt:
+## Voraussetzungen
+Ein Java JDK muss richtig installiert sein und in der *PATH* Variablen *javac.exe* verknüpft sein. Ferner sollte die *JAVA_HOME* Variable auf das JDK richtig gesetzt sein
+## Möglichkeit 1
+
+Dazu ist die Extension [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) installiert werden.
+
+Der Java Code kann dann einfach über das Pfeil Symbol ausgeführt werden.
+
+## Möglichkeit 2
+Über eine Build Task kann das Kompilieren des Java Codes gestartet werden, ein build Task kann z.B. wie folgt aussehen:
+
 ```
 {
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
         {
             "label": "Compile all Java Files",
             "command": "java",
             "windows": {
-                "command": "C:\\Program Files\\Java\\jdk1.8.0_131\\bin\\javac.exe"
+                "command": "${env:JAVA_HOME}\\bin\\javac.exe"
             },
             "args": [
                 "*.java"
@@ -42,32 +38,12 @@ Die Java-Dateien müssen mit Hilfe des Java-Compilers übersetzt werden, dazu wi
     ]
 } 
 ```
-Dabei ist darauf zu achten, dass *command* den Java-Compiler *javac.exe* korrekt startet. Dieser Build Task kann gestartet werden mittels *STRG+SHIFT+B*.
+Dieser Build Task kann gestartet werden mittels *STRG+SHIFT+B*. Über die Konsole kann anschließend die kompilierte JAVA Klasse mit *java Klassenbezeichnung* gestartet werden.
 
-### Automatisches Ausführen des BuildTasks
-Um das Programm zu starten kann dann die normale *launch.json* verwendet werden. Wobei über das Attribut *classPaths* auch JAR Files mit angegeben werden können (wie in unterem Beispiel z.B. ein MySQL Connector). Damit der Build Task automatisch gestartet wird, bevor der Debugger startet muss in *preLaunchTask* der Name des Tasks angegeben werden. In *mainClass* muss der Name der Klasse eingetragen werden, die die main-Methode enthält.
+## Automatisches Ausführen des BuildTasks
+Um den Programm zu starten muss noch eine Launch Konfiguration hinzugefügt werden. Dabei wird der zuvor entwickelte Build Task als *preLaunchTask* definiert.
+
 ```
-{
-
-    "version": "0.2.0",
-    "configurations": [       
-       {
-            "type": "java",
-            "name": "Debug (Launch)-Main1",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "console": "internalConsole",
-            "stopOnEntry": false,
-            "mainClass": "Main1",
-            "preLaunchTask": "Compile all Java Files",
-            "classPaths": [
-                ".",
-                "${workspaceFolder}\\mysql-connector-java-5.1.46.jar"
-            ],
-            "args": ""
-        }  
-    ]
-}
 ``` 
 
 Anschließend kann via *F5* das Programm kompiliert und gestartet werden!
@@ -80,9 +56,6 @@ Damit die kompilierten class Dateien nicht im Editor erscheinen, können diese a
      },
 
 ```
-
-
-Kommt es zu einem Fehler beim Starten des Debuggers *Build failed, do you whant to continue?* liegt ein Compilerfehler vor, welcher genau steht in der Console unter *Ausgabe/Debugger for Java*.
 
 
 ## Snippets
