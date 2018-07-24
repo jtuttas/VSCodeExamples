@@ -16,7 +16,6 @@ Der Java Code kann dann einfach über das Pfeil Symbol ausgeführt werden.
     // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
-        {
             "label": "Compile all Java Files",
             "command": "java",
             "windows": {
@@ -29,10 +28,20 @@ Der Java Code kann dann einfach über das Pfeil Symbol ausgeführt werden.
                 "kind": "build",
                 "isDefault": true
             },
-            "presentation": {
-                "reveal": "never",
-                "focus": false
-            },
+          
+            "problemMatcher": {
+                "owner": "external",
+                "fileLocation": ["absolute"],
+                "pattern": [
+                    {
+                        "regexp": "^(.+\\.java):(\\d):(?:\\s+(error)):(?:\\s+(.*))$",
+                        "file": 1,
+                        "location": 2,
+                        "severity": 3,
+                        "message": 4
+                    }
+                ]
+            }
            
         }
     ]
@@ -59,14 +68,7 @@ Will mann das Programm starten benötigt man einen weiteren Task..:
         } 
 ```
 
-Man kann auch beide Task zusammen ausführen, dazu benötigt man einen weiteren Task:
 
-```
-        {
-            "label": "Compile and Run",
-            "dependsOn": ["Compile all Java Files","Run Java Programm"]
-        }
-```
 ## Tipps
 Damit die kompilierten class Dateien nicht im Editor erscheinen, können diese ausgebelden werden über folgenden Eintrag in den Einstellungen:
 ```
