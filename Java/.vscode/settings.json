@@ -3,5 +3,6 @@
      "files.exclude": {
          "*.class":true
      },
-
+     "terminal.integrated.shellArgs.windows": [
+    ],
 }

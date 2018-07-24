@@ -46,7 +46,6 @@
                 "panel": "shared",
                 "showReuseMessage": true
             }
-
         },
         {
             "label": "Compile and Run",

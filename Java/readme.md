@@ -40,14 +40,33 @@ Der Java Code kann dann einfach über das Pfeil Symbol ausgeführt werden.
 ```
 Dieser Build Task kann gestartet werden mittels *STRG+SHIFT+B*. Über die Konsole kann anschließend die kompilierte JAVA Klasse mit *java Klassenbezeichnung* gestartet werden.
 
-## Automatisches Ausführen des BuildTasks
-Um den Programm zu starten muss noch eine Launch Konfiguration hinzugefügt werden. Dabei wird der zuvor entwickelte Build Task als *preLaunchTask* definiert.
+Will mann das Programm starten benötigt man einen weiteren Task..:
+```
+       {
+            "label": "Run Java Programm",
+            "type": "shell",
+            "command": "${env:JAVA_HOME}\\bin\\java.exe",
+            "args": [
+                "Main2"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true
+            }
+        } 
+```
+
+Man kann auch beide Task zusammen ausführen, dazu benötigt man einen weiteren Task:
 
 ```
-``` 
-
-Anschließend kann via *F5* das Programm kompiliert und gestartet werden!
-
+        {
+            "label": "Compile and Run",
+            "dependsOn": ["Compile all Java Files","Run Java Programm"]
+        }
+```
 ## Tipps
 Damit die kompilierten class Dateien nicht im Editor erscheinen, können diese ausgebelden werden über folgenden Eintrag in den Einstellungen:
 ```

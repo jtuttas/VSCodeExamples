@@ -28,7 +28,7 @@ public class Main1 {
         m.setName("test");
 
 
-        ein fehler
+        
         Connection myConnection;
         try {
             myConnection = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","");
