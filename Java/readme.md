@@ -7,6 +7,8 @@ Dazu ist die Extension [Code Runner](https://marketplace.visualstudio.com/items?
 
 Der Java Code kann dann einfach über das Pfeil Symbol ausgeführt werden.
 
+![Screencast](example.gif)
+
 ## Möglichkeit 2
 Über eine Build Task kann das Kompilieren des Java Codes gestartet werden, ein build Task kann z.B. wie folgt aussehen:
 
