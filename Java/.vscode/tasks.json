@@ -16,10 +16,11 @@
                 "kind": "build",
                 "isDefault": true
             },
-          
             "problemMatcher": {
                 "owner": "external",
-                "fileLocation": ["absolute"],
+                "fileLocation": [
+                    "absolute"
+                ],
                 "pattern": [
                     {
                         "regexp": "^(.+\\.java):(\\d):(?:\\s+(error)):(?:\\s+(.*))$",
@@ -30,7 +31,6 @@
                     }
                 ]
             }
-           
         },
         {
             "label": "Run Java Programm",
@@ -45,7 +45,8 @@
                 "focus": false,
                 "panel": "shared",
                 "showReuseMessage": true
-            }
+            },
+            "problemMatcher": []
         }
     ]
 } 
