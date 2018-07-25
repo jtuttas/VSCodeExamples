@@ -14,13 +14,6 @@
             "mainClass": "mmbbs.App",
             "projectName": "JavaMaven",
             "args": ""
-        },
-        {
-            "type": "java",
-            "name": "Debug (Attach)",
-            "request": "attach",
-            "hostName": "localhost",
-            "port": 0
         }
     ]
 }
