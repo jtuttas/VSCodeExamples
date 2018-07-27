@@ -2,51 +2,69 @@
 Hier sind einige beispielhafte Konfigurationen von Visual Studio Code f. diverse Programmiersprachen (siehe readme.md in den einzelnen Unterordnern).
 
 ## Extensions
-Meine Extension, aus .vscode/Extensions, angezeigt mit *code --list-extensions*.
+Wer meine Erweiterungen installieren will, der führt einfach folgende Befehlssequenz aus (diese wurde erzeugt mittels..)
 ```
-abusaidm.html-snippets
-christian-kohler.npm-intellisense
-christian-kohler.path-intellisense
-donjayamanne.githistory
-donjayamanne.jquerysnippets
-dracula-theme.theme-dracula
-ecmel.vscode-html-css
-eg2.vscode-npm-script
-felixfbecker.php-intellisense
-formulahendry.azure-virtual-machine-explorer
-formulahendry.code-runner
-formulahendry.vscode-mysql
-humao.rest-client
-jebbs.plantuml
-johnpapa.Angular2
-mongoose-os.mongoose-os-ide
-ms-azuretools.vscode-azureappservice
-ms-azuretools.vscode-azurefunctions
-ms-azuretools.vscode-cosmosdb
-ms-mssql.mssql
-ms-python.python
-ms-vscode.azure-account
-ms-vscode.azurecli
-ms-vscode.cpptools
-ms-vscode.PowerShell
-msjsdiag.debugger-for-chrome
-natewallace.angular2-inline
-PeterJausovec.vscode-docker
-platformio.platformio-ide
-rafaelmaiolla.remote-vscode
-redhat.java
-ritwickdey.LiveServer
-shakram02.bash-beautify
-Shan.code-settings-sync
-vsciot-vscode.azure-iot-toolkit
-vscjava.vscode-java-debug
-vscjava.vscode-java-pack
-vscjava.vscode-java-test
-vscjava.vscode-maven
-wcwhitehead.bootstrap-3-snippets
-webfreak.debug
-Zignd.html-css-class-completion
+code --list-extensions | xargs -L 1 echo code --install-extension
 ```
+
+Hier meine Extensions zum installieren..
+```
+code --install-extension abusaidm.html-snippets                                   
+code --install-extension alefragnani.Bookmarks                                    
+code --install-extension alexcvzz.vscode-sqlite                                   
+code --install-extension christian-kohler.npm-intellisense                        
+code --install-extension christian-kohler.path-intellisense                       
+code --install-extension dbaeumer.vscode-eslint                                   
+code --install-extension donjayamanne.githistory                                  
+code --install-extension donjayamanne.jquerysnippets                              
+code --install-extension DotJoshJohnson.xml                                       
+code --install-extension dracula-theme.theme-dracula                              
+code --install-extension ecmel.vscode-html-css                                    
+code --install-extension eg2.vscode-npm-script                                    
+code --install-extension felixfbecker.php-intellisense                            
+code --install-extension formulahendry.auto-close-tag                             
+code --install-extension formulahendry.azure-virtual-machine-explorer             
+code --install-extension formulahendry.code-runner                                
+code --install-extension formulahendry.vscode-mysql                               
+code --install-extension GrapeCity.gc-excelviewer                                 
+code --install-extension Gruntfuggly.todo-tree                                    
+code --install-extension humao.rest-client                                        
+code --install-extension jebbs.plantuml                                           
+code --install-extension johnpapa.Angular2                                        
+code --install-extension mongoose-os.mongoose-os-ide                              
+code --install-extension ms-azuretools.vscode-azureappservice                     
+code --install-extension ms-azuretools.vscode-azurefunctions                      
+code --install-extension ms-azuretools.vscode-cosmosdb                            
+code --install-extension MS-CEINTL.vscode-language-pack-de                        
+code --install-extension ms-python.python                                         
+code --install-extension ms-vscode.azure-account                                  
+code --install-extension ms-vscode.azurecli                                       
+code --install-extension ms-vscode.cpptools                                       
+code --install-extension ms-vscode.PowerShell                                     
+code --install-extension ms-vsliveshare.vsliveshare                               
+code --install-extension ms-vsts.team                                             
+code --install-extension msjsdiag.debugger-for-chrome                             
+code --install-extension mtxr.sqltools                                            
+code --install-extension natewallace.angular2-inline                              
+code --install-extension PeterJausovec.vscode-docker                              
+code --install-extension platformio.platformio-ide                                
+code --install-extension rafaelmaiolla.remote-vscode                              
+code --install-extension redhat.java                                              
+code --install-extension ritwickdey.LiveServer                                    
+code --install-extension shakram02.bash-beautify                                  
+code --install-extension Shan.code-settings-sync                                  
+code --install-extension streetsidesoftware.code-spell-checker                    
+code --install-extension streetsidesoftware.code-spell-checker-german             
+code --install-extension tht13.python                                             
+code --install-extension vsciot-vscode.azure-iot-toolkit                          
+code --install-extension vscjava.vscode-java-debug                                
+code --install-extension vscjava.vscode-java-pack                                 
+code --install-extension vscjava.vscode-java-test                                 
+code --install-extension vscjava.vscode-maven                                     
+code --install-extension wcwhitehead.bootstrap-3-snippets                         
+code --install-extension webfreak.debug                                           
+code --install-extension xyz.local-history                                        
+code --install-extension Zignd.html-css-class-completion                          ```
 ## Tipps
 ### Azure
 Wird die Azure CLI verwendet, so muss diese erst angemeldet werden, dieses geschieht über den Befehl *az login* anschließend muss auf der angezeigten Webseite der angezeigte Code eingegeben werden.
