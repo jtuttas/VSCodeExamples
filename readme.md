@@ -64,7 +64,9 @@ code --install-extension vscjava.vscode-maven
 code --install-extension wcwhitehead.bootstrap-3-snippets                         
 code --install-extension webfreak.debug                                           
 code --install-extension xyz.local-history                                        
-code --install-extension Zignd.html-css-class-completion                          ```
+code --install-extension Zignd.html-css-class-completion
+```
+
 ## Tipps
 ### Azure
 Wird die Azure CLI verwendet, so muss diese erst angemeldet werden, dieses geschieht über den Befehl *az login* anschließend muss auf der angezeigten Webseite der angezeigte Code eingegeben werden.
