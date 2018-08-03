@@ -4,67 +4,67 @@ Hier sind einige beispielhafte Konfigurationen von Visual Studio Code f. diverse
 ## Extensions
 Wer meine Erweiterungen installieren will, der führt einfach folgende Befehlssequenz aus (diese wurde erzeugt mittels..)
 ```
-code --list-extensions | xargs -L 1 echo code --install-extension
+code --list-extensions | xargs -L 1 echo call code --install-extension
 ```
 
 Hier meine Extensions zum installieren..
 ```
-code --install-extension abusaidm.html-snippets                                   
-code --install-extension alefragnani.Bookmarks                                    
-code --install-extension alexcvzz.vscode-sqlite                                   
-code --install-extension christian-kohler.npm-intellisense                        
-code --install-extension christian-kohler.path-intellisense                       
-code --install-extension dbaeumer.vscode-eslint                                   
-code --install-extension donjayamanne.githistory                                  
-code --install-extension donjayamanne.jquerysnippets                              
-code --install-extension DotJoshJohnson.xml                                       
-code --install-extension dracula-theme.theme-dracula                              
-code --install-extension ecmel.vscode-html-css                                    
-code --install-extension eg2.vscode-npm-script                                    
-code --install-extension felixfbecker.php-intellisense                            
-code --install-extension formulahendry.auto-close-tag                             
-code --install-extension formulahendry.azure-virtual-machine-explorer             
-code --install-extension formulahendry.code-runner                                
-code --install-extension formulahendry.vscode-mysql                               
-code --install-extension GrapeCity.gc-excelviewer                                 
-code --install-extension Gruntfuggly.todo-tree                                    
-code --install-extension humao.rest-client                                        
-code --install-extension jebbs.plantuml                                           
-code --install-extension johnpapa.Angular2                                        
-code --install-extension mongoose-os.mongoose-os-ide                              
-code --install-extension ms-azuretools.vscode-azureappservice                     
-code --install-extension ms-azuretools.vscode-azurefunctions                      
-code --install-extension ms-azuretools.vscode-cosmosdb                            
-code --install-extension MS-CEINTL.vscode-language-pack-de                        
-code --install-extension ms-python.python                                         
-code --install-extension ms-vscode.azure-account                                  
-code --install-extension ms-vscode.azurecli                                       
-code --install-extension ms-vscode.cpptools                                       
-code --install-extension ms-vscode.PowerShell                                     
-code --install-extension ms-vsliveshare.vsliveshare                               
-code --install-extension ms-vsts.team                                             
-code --install-extension msjsdiag.debugger-for-chrome                             
-code --install-extension mtxr.sqltools                                            
-code --install-extension natewallace.angular2-inline                              
-code --install-extension PeterJausovec.vscode-docker                              
-code --install-extension platformio.platformio-ide                                
-code --install-extension rafaelmaiolla.remote-vscode                              
-code --install-extension redhat.java                                              
-code --install-extension ritwickdey.LiveServer                                    
-code --install-extension shakram02.bash-beautify                                  
-code --install-extension Shan.code-settings-sync                                  
-code --install-extension streetsidesoftware.code-spell-checker                    
-code --install-extension streetsidesoftware.code-spell-checker-german             
-code --install-extension tht13.python                                             
-code --install-extension vsciot-vscode.azure-iot-toolkit                          
-code --install-extension vscjava.vscode-java-debug                                
-code --install-extension vscjava.vscode-java-pack                                 
-code --install-extension vscjava.vscode-java-test                                 
-code --install-extension vscjava.vscode-maven                                     
-code --install-extension wcwhitehead.bootstrap-3-snippets                         
-code --install-extension webfreak.debug                                           
-code --install-extension xyz.local-history                                        
-code --install-extension Zignd.html-css-class-completion
+call code --install-extension abusaidm.html-snippets                                   
+call code --install-extension alefragnani.Bookmarks                                    
+call code --install-extension alexcvzz.vscode-sqlite                                   
+call code --install-extension christian-kohler.npm-intellisense                        
+call code --install-extension christian-kohler.path-intellisense                       
+call code --install-extension dbaeumer.vscode-eslint                                   
+call code --install-extension donjayamanne.githistory                                  
+call code --install-extension donjayamanne.jquerysnippets                              
+call code --install-extension DotJoshJohnson.xml                                       
+call code --install-extension dracula-theme.theme-dracula                              
+call code --install-extension ecmel.vscode-html-css                                    
+call code --install-extension eg2.vscode-npm-script                                    
+call code --install-extension felixfbecker.php-intellisense                            
+call code --install-extension formulahendry.auto-close-tag                             
+call code --install-extension formulahendry.azure-virtual-machine-explorer             
+call code --install-extension formulahendry.code-runner                                
+call code --install-extension formulahendry.vscode-mysql                               
+call code --install-extension GrapeCity.gc-excelviewer                                 
+call code --install-extension Gruntfuggly.todo-tree                                    
+call code --install-extension humao.rest-client                                        
+call code --install-extension jebbs.plantuml                                           
+call code --install-extension johnpapa.Angular2                                        
+call code --install-extension mongoose-os.mongoose-os-ide                              
+call code --install-extension ms-azuretools.vscode-azureappservice                     
+call code --install-extension ms-azuretools.vscode-azurefunctions                      
+call code --install-extension ms-azuretools.vscode-cosmosdb                            
+call code --install-extension MS-CEINTL.vscode-language-pack-de                        
+call code --install-extension ms-python.python                                         
+call code --install-extension ms-vscode.azure-account                                  
+call code --install-extension ms-vscode.azurecli                                       
+call code --install-extension ms-vscode.cpptools                                       
+call code --install-extension ms-vscode.PowerShell                                     
+call code --install-extension ms-vsliveshare.vsliveshare                               
+call code --install-extension ms-vsts.team                                             
+call code --install-extension msjsdiag.debugger-for-chrome                             
+call code --install-extension mtxr.sqltools                                            
+call code --install-extension natewallace.angular2-inline                              
+call code --install-extension PeterJausovec.vscode-docker                              
+call code --install-extension platformio.platformio-ide                                
+call code --install-extension rafaelmaiolla.remote-vscode                              
+call code --install-extension redhat.java                                              
+call code --install-extension ritwickdey.LiveServer                                    
+call code --install-extension shakram02.bash-beautify                                  
+call code --install-extension Shan.code-settings-sync                                  
+call code --install-extension streetsidesoftware.code-spell-checker                    
+call code --install-extension streetsidesoftware.code-spell-checker-german             
+call code --install-extension tht13.python                                             
+call code --install-extension vsciot-vscode.azure-iot-toolkit                          
+call code --install-extension vscjava.vscode-java-debug                                
+call code --install-extension vscjava.vscode-java-pack                                 
+call code --install-extension vscjava.vscode-java-test                                 
+call code --install-extension vscjava.vscode-maven                                     
+call code --install-extension wcwhitehead.bootstrap-3-snippets                         
+call code --install-extension webfreak.debug                                           
+call code --install-extension xyz.local-history                                        
+call code --install-extension Zignd.html-css-class-completion
 ```
 
 ## Tipps
