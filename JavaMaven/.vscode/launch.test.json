@@ -1,0 +1,30 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "JavaMaven",
+                "projectName": "JavaMaven",
+                "workingDirectory": "c:\\Users\\jtutt\\OneDrive - Multi-Media Berufsbildende Schulen\\Code\\Examples\\JavaMaven",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "JavaMaven",
+                "projectName": "JavaMaven",
+                "workingDirectory": "c:\\Users\\jtutt\\OneDrive - Multi-Media Berufsbildende Schulen\\Code\\Examples\\JavaMaven",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}

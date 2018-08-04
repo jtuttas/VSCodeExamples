@@ -1,6 +1,8 @@
 # Java Maven Projekt mit JUNIT4 Test
 ## Voraussetzungen
+- Es muss Java installiert sein und die PATH Variable auf *{JDK}/bin/* verweisen. Ferner sollte die Variable JAVA_HOME auf das JDK verweisen.
 - Es muss Maven installiert sein, dazu ist das Maven Paket herunter zu laden und die PATH Variable zu setzten, so dass *mvn.exe* gestartet werden kann.
+- Benötigt werden die Extensions für [Java](https://code.visualstudio.com/docs/java/extensions) diese installieren weitere Abhängigkeiten.
 
 ## Installation
 Mittels des Befehls..
@@ -40,5 +42,5 @@ Kommt es zu einem Fehler beim Starten des Debuggers *Build failed, do you whant 
 - MacOS : ```$HOME/Library/Application Support/Code[ - Variant]/User/workspaceStorage/```
 - Linux : ```$HOME/.config/Code[ - Variant]/User/workspaceStorage/```
 
-Weitere Hinweise auf den Fehler lassen sich auch finden in der Console unter *Ausgabe/Debugger for Java*.
+Weitere Hinweise auf den Fehler lassen sich auch finden in der Konsole unter *Ausgabe/Debugger for Java*.
 

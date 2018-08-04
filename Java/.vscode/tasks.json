@@ -7,7 +7,7 @@
             "label": "Compile all Java Files",
             "command": "java",
             "windows": {
-                "command": "C:\\Program Files\\Java\\jdk1.8.0_131\\bin\\javac.exe"
+                "command": "${env:JAVA_HOME}\\bin\\javac.exe"
             },
             "args": [
                 "*.java"
@@ -16,11 +16,37 @@
                 "kind": "build",
                 "isDefault": true
             },
+            "problemMatcher": {
+                "owner": "external",
+                "fileLocation": [
+                    "absolute"
+                ],
+                "pattern": [
+                    {
+                        "regexp": "^(.+\\.java):(\\d):(?:\\s+(error)):(?:\\s+(.*))$",
+                        "file": 1,
+                        "location": 2,
+                        "severity": 3,
+                        "message": 4
+                    }
+                ]
+            }
+        },
+        {
+            "label": "Run Java Programm",
+            "type": "shell",
+            "command": "${env:JAVA_HOME}\\bin\\java.exe",
+            "args": [
+                "Main2"
+            ],
             "presentation": {
-                "reveal": "never",
-                "focus": false
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true
             },
-           
+            "problemMatcher": []
         }
     ]
 } 
